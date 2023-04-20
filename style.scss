@@ -26,8 +26,9 @@ $accent_orange: #FFA735;
 
 //@import "scss/fonts";
 @import "scss/header";
-//@import "scss/main";
+@import "scss/main";
 @import "scss/footer";
+
 
 @mixin transition {
   transition:$transition-base;
@@ -43,20 +44,63 @@ $accent_orange: #FFA735;
   }
 }
 .container-fluid {
-  max-width: 1573px;
+  max-width: 1600px;
   margin:0 auto;
+  padding: 0 30px 0 30px;
 }
 
 .container-second-fluid {
-  max-width: 1224px;
+  max-width: 1254px;
   margin:0 auto;
+  padding: 0 30px 0 30px;
 }
+
+@media (max-width: 1740px){
+  .container-fluid {
+    max-width: 1600px;
+    margin:0 auto;
+    padding: 0 128px 0 128px;
+  }
+  .container-second-fluid {
+    max-width: 1254px;
+    margin:0 auto;
+    padding: 0 128px 0 128px;
+  }
+}
+
+@media (max-width: 1024px){
+  .container-fluid {
+    max-width: 1600px;
+    margin:0 auto;
+    padding: 0 30px 0 30px;
+  }
+  .container-second-fluid {
+    max-width: 1254px;
+    margin:0 auto;
+    padding: 0 30px 0 30px;
+  }
+}
+//
+//@media (max-width: 768px){
+//  .container-fluid {
+//    max-width: 1600px;
+//    margin:0 auto;
+//    padding: 0 30px 0 30px;
+//  }
+//  .container-second-fluid {
+//    max-width: 1254px;
+//    margin:0 auto;
+//    padding: 0 30px 0 30px;
+//  }
+//}
 
 
 * {
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 html, body {

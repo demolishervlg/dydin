@@ -1,12 +1,13 @@
 header{
   margin-top: 40px;
-
+  margin-bottom: 40px;
   .header-inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 32px;
+    width: 100%;
 
     .logo{
       display: flex;
@@ -336,4 +337,140 @@ header{
 
   }
 
+  @media (max-width: 1280px) {
+    .header-inner {
+      .contacts{
+        .social-items{
+          display: none;
+        }
+      }
+    }
+    .menu {
+      display: none;
+    }
+    
+  }
+
+  @media (max-width: 1024px) {
+
+    .slide-menu-button{
+      position: relative;
+      border-right: unset;
+      padding: unset;
+    }
+
+    .header-inner {
+      flex-wrap: unset;
+      flex-direction: row;
+      .logo{
+        &-text{
+          &-title{
+            margin-top: 10px;
+            font-size: 20px;
+          }
+          &-subtitle{
+            font-size: 14px;
+          }
+        }
+      }
+      .contacts{
+        .phone{
+          &-number{
+            display: none;
+          }
+          .btn{
+            content: url("/img/subtract.svg");
+          }
+
+        }
+      }
+    }
+
+    .slide-menu{
+      .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        transition: 0.5s;
+        display: grid;
+        flex-wrap: wrap;
+        grid-template-columns: 1fr;
+        overflow: auto;
+
+        &-content{
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          overflow: unset;
+          padding-top: unset;
+          padding-bottom: 50px;
+          display: flex;
+          flex-wrap: wrap;
+          .sidebar-menu {
+            &-list {
+              display: grid;
+              flex-wrap: wrap;
+              grid-template-columns: repeat(1, minmax(50px, max-content));
+              column-gap: 53px;
+              row-gap: 12px;
+              justify-content: center;
+              list-style-type: none;
+              margin: 0;
+              padding-left: 30px;
+              padding-right: 15px;
+            }
+          }
+        }
+        .slide-closebtn{
+          padding: 0  0 0 30px;
+          border-right: unset;
+          .slide-logo{
+            display: none;
+          }
+          .closebtn {
+            margin: unset;
+            padding: unset;
+          }
+
+        }
+      }
+      @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+      }
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    .header-inner {
+      .logo{
+        flex-direction: column;
+        &-img{
+          width: 72px;
+          height: 72px;
+        }
+        &-text{
+          text-align: center;
+          margin-left: unset;
+          &-title{
+            font-size: 18px;
+          }
+          &-subtitle{
+            display: none;
+          }
+        }
+      }
+      .contacts{
+        .phone{
+          margin-left: unset;
+        }
+      }
+    }
+  }
 }
+

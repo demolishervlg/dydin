@@ -12,8 +12,9 @@ $(document).ready(function(){
 
 
 function openNav() {
-    document.getElementById("mySidebar").style.width = "80%";
+    document.getElementById("mySidebar").style.width = "85%";
 }
+
 
 /* Установите ширину боковой панели в 0 (скройте ее) */
 function closeNav() {
