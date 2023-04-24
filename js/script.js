@@ -23,5 +23,14 @@ function closeNav() {
 
 $(function(){
 
+    var swiper = new Swiper(".slider-list-row", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        freeMode: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 
 })
