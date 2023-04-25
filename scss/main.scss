@@ -27,13 +27,43 @@
         color: $black_text;
         margin-bottom: 16px;
         margin-top: 8px;
+        padding: unset;
       }
+
       &-text {
         font-weight: 400;
         font-size: 20px;
         line-height: 160%;
         text-align: justify;
         color: $black_text;
+        padding: unset;
+
+        &.strong-justify{
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 160%;
+          text-align: justify;
+          color: $black_text;
+
+        }
+
+      }
+
+      ul {
+        list-style-type: none;
+        position: relative;
+        font-weight: 400;
+        font-size: 20px;
+        padding: 40px;
+        li::before {
+          content: '';
+          position: absolute;
+          background: url(img/Vector.svg) no-repeat center;
+          left: -5px;
+          height: 20px; width: 20px;
+          text-align: center;
+          padding-top: 18px;
+        }
       }
 
       &-buttons{
@@ -41,6 +71,10 @@
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
+
+        &.btns-center{
+          justify-content: center;
+        }
 
         .btn{
           padding: 10px 20px;
@@ -102,6 +136,80 @@
       &:last-child{
         margin-bottom: unset;
       }
+
+      &-list{
+        &-items{
+          padding: unset;
+          margin-top: 34px;
+          display: flex;
+          gap: 16px;
+          flex-direction: column;
+        }
+        &-item{
+          width: 100%;
+          padding: 16px 38px;
+          background: #FFFFFF;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: row;
+          .num{
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 120%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #E3EEF9;
+          }
+          .text{
+            margin-left: 56px;
+            &-title{
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 160%;
+              color: $black_text;
+            }
+            &-subtext{
+              font-weight: 400;
+              font-size: 20px;
+              line-height: 160%;
+              text-align: justify;
+              color: $black_text
+            }
+          }
+        }
+
+      }
+
+      &-quote{
+        padding: 42px 133px;
+        border: 1px solid $gray_line;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 160%;
+        text-align: justify;
+        color: $gray_text-2;
+        position: relative;
+
+        &:before {
+          content: "\201C";
+          font-family: serif;
+          position: absolute;
+          left: 29px;
+          top: -13px;
+          color: $gray_line;
+          background: transparent;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          font-size: 130px;
+          line-height: 1.35;
+          text-align: center;
+        }
+
+      }
+
 
       @media (max-width: 1440px) {
         &-slider-wrap {
