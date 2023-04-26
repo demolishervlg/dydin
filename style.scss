@@ -9,6 +9,7 @@ $grid-breakpoints: (
 ) !default;
 
 
+
 $grid-gutter-width:24px !default;
 $transition-base:all .25s ease-out !default;
 $font-family-base:'Montserrat', sans-serif;
@@ -26,11 +27,16 @@ $accent_orange: #FFA735;
 
 
 
+
 //@import "scss/fonts";
 @import "scss/header";
 @import "scss/main";
 @import "scss/services";
+@import "scss/items";
+@import "scss/posts";
+@import "scss/partners";
 @import "scss/footer";
+
 
 
 @mixin transition {
@@ -160,6 +166,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   padding: 0 0 10px 0;
   font-weight: normal;
   color: #555;
+  text-align: left;
 }
 
 h1, .h1 {
@@ -168,6 +175,14 @@ h1, .h1 {
   line-height: 120%;
   margin-bottom: 48px;
 }
+
+@media (max-width: 425px){
+  h1, .h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+}
+
 h2, .h2 {
   font-weight: 800;
   font-size: 40px;

@@ -33,4 +33,37 @@ $(function(){
         },
     });
 
+    var swiperArticles = new Swiper(".slider-list-services-articles", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".services-button-articles-next",
+            prevEl: ".services-button-articles-prev",
+        },
+    });
+
+    var swiperServicesSmi = new Swiper(".slider-list-services-smi", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".services-button-smi-next",
+            prevEl: ".services-button-smi-prev",
+        },
+    });
+
+    var review = new Swiper(".slider-list-review", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".next-slider-review-button",
+            prevEl: ".prev-slider-review-button",
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            1030: {
+                slidesPerView: 2,
+            }
+        }
+    });
+
 })
