@@ -9,7 +9,7 @@
     background: #FFFFFF;
     border: 2px solid $brand_blue;
     border-radius: 8px;
-    padding: 50px 176px;
+    padding: 50px 130px;
 
     &-name {
       font-weight: 800;
@@ -56,6 +56,12 @@
   .groups-services {
     &-item {
       padding: 25px;
+
+      .service {
+        &-items{
+          font-size: 16px;
+          }
+        }
     }
   }
 }
@@ -63,6 +69,8 @@
 
 .tabs {
   font-size: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tabs>input[type="radio"] {
@@ -70,9 +78,7 @@
 }
 
 .tabs>div {
-  /* скрыть контент по умолчанию */
   display: none;
-  //border-top: 2px solid $gray_line;
   font-weight: 500;
   font-size: 24px;
   line-height: 160%;
@@ -93,7 +99,7 @@
   vertical-align: middle;
   user-select: none;
   background-color: transparent;
-  border: 2px solid $gray_line;
+  border: 1px solid $gray_line;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   cursor: pointer;
   position: relative;
@@ -255,7 +261,13 @@
 
   }
 
+  @media (max-width: 1600px) {
+    &-books{
+      max-width: unset;
+    }
+    &-articles{
+      max-width: unset;
+    }
+  }
 
 }
-
-

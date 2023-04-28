@@ -66,4 +66,32 @@ $(function(){
         }
     });
 
+    new SlimSelect({
+        select: "#service",
+        settings: {
+            showSearch: false,
+        },
+        option: {
+          style: 'height:48px'
+        }
+    })
+
+    new SlimSelect({
+        select: "#public",
+        settings: {
+            showSearch: false,
+        }
+    })
+
+    new SlimSelect({
+        select: "#face",
+        settings: {
+            showSearch: false,
+        }
+    })
+
 })
+
+
+
+

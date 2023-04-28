@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<div class="all">
+<div class="all front-page">
     <div class="wrapper">
         <header class="header-main">
             <div class="container-fluid">
@@ -49,58 +49,35 @@
                         </div>
                     </div>
                 </div>
-                <nav class="menu">
-                    <ul class="menu-list">
-                        <li class="menu-item active"><a href="#">Обо мне</a></li>
-                        <li class="menu-item">
-                            <a href="#">Услуги</a>
-                            <ul class="submenu">
-                                <li class="submenu-item">
-                                    <a href="#">Юридические услуги</a>
-                                    <ul class="submenuTree">
-                                        <li class="submenuTree-item"><a href="#">Консультирование по юридическим вопросам</a></li>
-                                        <li class="submenuTree-item"><a href="#">Юридическое сопровождение коммерческих сделок</a></li>
-                                        <li class="submenuTree-item"><a href="#">Помощь во внесудебном урегулировании</a></li>
-                                        <li class="submenuTree-item"><a href="#">Защита интересов судах</a></li>
-                                    </ul>
-                                </li>
-                                <li class="submenu-item">
-                                    <a href="#">Управленческий консалтинг</a>
-                                    <ul class="submenuTree">
-                                        <li class="submenuTree-item active"><a href="#">Консультации по вопросам менеджмента, риторики и коммуникаций</a></li>
-                                        <li class="submenuTree-item"><a href="#">Анализ бизнес-процесса</a></li>
-                                        <li class="submenuTree-item"><a href="#">Помощь в разработке и внедрении регламентов компании</a></li>
-                                        <li class="submenuTree-item"><a href="#">Проведением лекций, семинаров и тренингов</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">Публикации</a>
-                            <ul class="submenu">
-                                <li class="submenu-item"><a href="#">Логитипы</a></li>
-                                <li class="submenu-item"><a href="#">Шаблоны</a></li>
-                                <li class="submenu-item"><a href="#">Иконки</a></li>
-                                <li class="submenu-item"><a href="#">Плагины jQuery</a></li>
-                                <li class="submenu-item"><a href="#">маркетинг Internet</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">Упоминания в СМИ</a>
-                            <ul class="submenu">
-                                <li class="submenu-item"><a href="#">Китай</a></li>
-                                <li class="submenu-item"><a href="#">Япония</a></li>
-                                <li class="submenu-item"><a href="#">Канада</a></li>
-                                <li class="submenu-item"><a href="#">Автсралия</a></li>
-                                <li class="submenu-item"><a href="#">Южная Америка</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item"><a href="#">Партнёры</a></li>
-                        <li class="menu-item"><a href="#">Полезная информация</a></li>
-                        <li class="menu-item"><a href="#">Отзывы</a></li>
-                        <li class="menu-item"><a href="#">Контакты </a></li>
-                    </ul>
-                </nav>
+                <div class="front-content">
+                    <nav class="menu">
+                        <ul class="menu-list">
+                            <li class="menu-item active"><a href="#">Обо мне</a></li>
+                            <li class="menu-item"><a href="#">Услуги</a></li>
+                            <li class="menu-item"><a href="#">Публикации</a></li>
+                            <li class="menu-item"><a href="#">Упоминания в СМИ</a></li>
+                            <li class="menu-item"><a href="#">Партнёры</a></li>
+                            <li class="menu-item"><a href="#">Полезная информация</a></li>
+                            <li class="menu-item"><a href="#">Отзывы</a></li>
+                            <li class="menu-item"><a href="#">Контакты </a></li>
+                        </ul>
+                    </nav>
+                    <div class="front-logo">
+                        <img src="img/frontlogo.png" alt="">
+                    </div>
+                    <div class="front-form">
+                        <div class="front-form-title">
+                            Задайте вопрос
+                        </div>
+                        <div class="form">
+                            <input type="text" class="form-field" placeholder="Как вас зовут">
+                            <input type="text" class="form-field" placeholder="Номер телефона">
+                            <textarea class="form-field-textarea" placeholder="Какая помощь требуется"></textarea>
+                            <input id="agree" class="form-field-agree" type="checkbox" name="" ><label for="agree">Вы подтверждаете, что ознакомились с положением о защите персональных данных и даете согласие на их обработку*</label>
+                            <input type="submit" class="btn" value="Получить консультацию">
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="slide-menu">
                 <div id="mySidebar" class="sidebar">
@@ -188,191 +165,250 @@
             </div>
         </header>
         <main class="main">
-                <div class="container-second-fluid name-page">
-                    <h1>Обо мне</h1>
-                </div>
                 <div class="container-fluid main-content">
-
-                    <div class="section">
-                        <div class="section-content">
-                            <div class="section-image-left">
-                                <img src="img/1.png" alt="">
-                            </div>
-                            <div class="container-fluid section-title">
-                                Меня зовут Алексей Дудин.
-                            </div>
-                            <div class="container-second-fluid section-text">
-                                Я юрист, бизнес-консультант, медиатор. 
-                                Помогаю решать правовые вопросы, налаживать регулярный менеджмент в компании, а также повышать эффективность делового общения. Это мои ключевые компетенции. Опыт успешной практической деятельности без малого 20 лет. 
-                            </div>
+                <div class="section-front">
+                    <div class="section-front-content">
+                        <div class="section-front-title">
+                            Услуги, которые я оказываю
                         </div>
+                            <div class="tabs">
+                                <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                                <label for="tab-btn-1">Юридические услуги</label>
+                                <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                                <label for="tab-btn-2">Управленческий консалтинг</label>
+                                <div id="content-1">
+                                    <div class="section">
+                                        <div class="section-content">
+                                            <div class="section-text">
+                                                В рамках юридической практики мне доводилось решать самые разные правовые задачи как в интересах бизнеса, так и частных лиц. Вместе с тем, основными направлениями моей деятельности являются:
+                                                консультирование по юридическим вопросам (в том числе с предварительным изучением документов заказчика),
+                                                юридическое сопровождение коммерческих сделок (купли-продажи, поставки, подряда, оказания услуг, агентирования и других),
+                                                оказание помощи во внесудебном урегулировании экономических, имущественных и трудовых споров (путем использования переговорных и медиативных технологий, а также путем ведения переписки),
+                                                защита интересов в арбитражных судах и судах общей юрисдикции по экономическим, имущественным и трудовым спорам (путем подготовки необходимых процессуальных документов, а также путем участия в судебных заседаниях).
+                                            </div>
+                                            <div class="section-buttons">
+                                                <a href="#" class="btn btn-transparent">Подробнее</a>
+                                                <a href="#" class="btn">Получить консультацию</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="content-2">
+                                    Содержимое 2...
+                                </div>
+                            </div>
                     </div>
-
-                    <div class="section">
-                        <div class="section-content">
-                            <div class="container-second-fluid section-title">
-                                Выбор профессии
-                            </div>
-                            <div class="section-image-right">
-                                <img src="img/Rectangle4061.png" alt="">
-                            </div>
-                            <div class="container-second-fluid section-text">
-                                Решение стать юристом я принял в старших классах школы, прочитав историю об известном адвокате 19 века Федоре Никифоровиче Плевако. Ему предстояло в суде присяжных защищать священнослужителя, который под влиянием сложных жизненных обстоятельств присвоил деньги церковного прихода, пожертвованные прихожанами.
-                                Дело казалось безнадежным. Человек, который должен наставлять других, совершил такой неподобающий поступок. Но подсудимый, несмотря на произошедший инцидент, в целом был хорошим человеком и заслуживал снисхождения. После длинной обвинительной речи прокурора, от которой все присутствовавшие устали, Федор Никифорович встал, выдержал паузу, а затем произнес всего две фразы:
-                                «Люди добрые, этот человек двадцать лет отпускал Вам грехи. Отпустите один раз и Вы ему».
-                                После секундной паузы, которая воцарилась в суде, зал взорвался аплодисментами, а жюри присяжных, посовещавшись, приняло решение о том, чтобы оправдать подсудимого. Хоть я и не занимаюсь уголовными делами, но эта история до сих пор меня вдохновляет на поиск простых и вместе с тем эффективных путей решения проблем моих клиентов в рамках юридической практики.
-                            </div>
-                        </div>
                     </div>
-
-                    <div class="section">
-                        <div class="section-content">
-                            <div class="container-second-fluid section-title">
-                                Про управленческий консалтинг
-                            </div>
-                            <div class="section-image-right">
-                                <img src="img/2.png" alt="">
-                            </div>
-                            <div class="container-second-fluid section-text">
-                                А решение заняться управленческим консалтингом пришло практически сразу после начала ведения юридической практики. Столкнувшись с урегулированием экономических, трудовых и иных споров, я с первых дней убедился, что основная масса конфликтов, недоразумений и юридических сложностей в бизнесе возникает в результате плохо выстроенных деловых коммуникаций, а также погрешностей и пробелов, имеющихся в системе менеджмента. Соответственно, эффективное решение юридических проблем компании (так, чтобы риск их возникновения в будущем был минимален), практически всегда требует проявления внимания не только к правовым вопросам, но и к вопросам менеджмента и деловых коммуникаций. Комплексные и системные решения обычно дают наилучший результат. 
-                                Практика многих специалистов и экспертов наглядно показывает, что чем больше порядка в компании, тем меньше досадных промахов, ошибок и недоразумений возникает в ее работе. И тем выше будет эффективность осуществляемой деятельности, особенно когда речь идет о долгосрочной перспективе. Что касается риторики и коммуникаций, то умение грамотно говорить и общаться позволяет эффективно решать конфликты, заключать сделки, а также быть понятным и убедительным на публике.
-                            </div>
+                    <div class="section-front">
+                        <div class="section-front-title">
+                            Услуги, которые я оказываю
                         </div>
-                    </div>
-
-                    <div class="section">
-                        <div class="section-content">
-                            <div class="container-second-fluid section-title">
-                                Обучение
-                            </div>
-                            <div class="container-second-fluid section-text">
-                                Жизнь не стоит на месте. Поэтому я постоянно работаю над повышением своей квалификации, читая профессиональную литературу, общаясь с коллегами, а также посещая образовательные мероприятия по вопросам права, менеджмента, риторики и деловых коммуникаций. В числе прочего, я прошел обучение по Президентской программе подготовки управленческих кадров по направлению «Стратегический и проектный менеджмент», а также по программам «Экономика и управление на предприятии» и «Медиация».
-                            </div>
+                        <div class="section-front-subtitle">
+                            Автор 2 книг («Дебиторская задолженность. Методы возврата, которые работают» и «7 золотых советов юриста»), более 50 публикаций по вопросам права, менеджмента и деловых коммуникаций, а также Мастерской риторики «Меткое слово». Имею большой опыт выступлений в качестве спикера на различных бизнес-мероприятиях и на телевидении.
                         </div>
-                        <div class="container-fluid section-slider-wrap">
-                            <div class="container-second-fluid swiper slider-list-row">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                            <img src="img/image12.png">
+                        <div class="services-sections">
+                            <div class="services-books">
+                                <div class="services-books-title">
+                                    Книги
+                                </div>
+                                <div class="services-books-items">
+                                    <div class="services-books-item">
+                                        <img src="img/image41.png" alt="">
                                     </div>
-                                    <div class="swiper-slide">
-                                            <img src="img/image13.png">
-                                    </div>
-                                    <div class="swiper-slide">
-                                            <img src="img/image15.png">
-                                    </div>
-                                    <div class="swiper-slide">
-                                            <img src="img/2.png">
-                                    </div>
-                                    <div class="swiper-slide">
-                                            <img src="img/1.png">
+                                    <div class="services-books-item">
+                                        <img src="img/image42.png" alt="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-button-next next-slider-button"></div>
-                            <div class="swiper-button-prev prev-slider-button"></div>
-                        </div>
-                    </div>
-
-                    <div class="section">
-                        <div class="section-content">
-                            <div class="container-second-fluid section-title">
-                                Профессиональные награды
+                            <div class="services-articles">
+                                <div class="services-articles-title">
+                                    Статьи
+                                </div>
+                                <div class="services-articles-slider-wrap">
+                                    <div class="swiper slider-list-services-articles">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="text">
+                                                    <div class="title">
+                                                        Сократить по правилам. Чем грозит работодателю нарушение процедуры сокращения численности или штата работников организации и как избежать негативных последствий?
+                                                    </div>
+                                                    <div class="subtext">
+                                                        Издание Волгоградской торгово-промышленной палаты «Южный деловой вестник» № 6 (329) от «31» августа 2018 года, стр. 6
+                                                    </div>
+                                                </div>
+                                                <div class="img">
+                                                    <img src="img/image43.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="text">
+                                                    <div class="title">
+                                                        Здание Волгоградской торгово-промышленной палаты
+                                                    </div>
+                                                    <div class="subtext">
+                                                        Издание Волгоградской торгово-промышленной палаты «Южный деловой вестник» № 6 (329) от «31» августа 2018 года, стр. 6
+                                                    </div>
+                                                </div>
+                                                <div class="img">
+                                                    <img src="img/image43.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="text">
+                                                    <div class="title">
+                                                        Кроме того стоит отметить, что я являюсь автором 2 книг
+                                                    </div>
+                                                    <div class="subtext">
+                                                        Издание Волгоградской торгово-промышленной палаты «Южный деловой вестник» № 6 (329) от «31» августа 2018 года, стр. 6
+                                                    </div>
+                                                </div>
+                                                <div class="img">
+                                                    <img src="img/image43.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next services-button-next services-button-articles-next"></div>
+                                    <div class="swiper-button-prev services-button-prev services-button-articles-prev"></div>
+                                </div>
+                                <div class="btns">
+                                    <a href="#" class="btn btn-transparent">Другие статьи</a>
+                                </div>
                             </div>
-                            <div class="container-second-fluid section-text">
-                                «В 2014 году был награжден Почетной грамотой Волгоградской городской Думы за добросовестный труд, значительный вклад в развитие предпринимательства Волгограда и в связи с Днем российского предпринимательства, а также Благодарственным письмом Волгоградской областной Думы за многолетний добросовестный труд, высокий профессионализм и большой вклад в развитие производства Волгоградской области.
 
-                                В 2017 году был награжден Дипломом общественной программы «Во благо России» за благородный труд и высокий профессионализм.
-
-                                В 2019 году был награжден дипломами и памятным призом (статуэткой древнегреческого бога-покровителя торговли Меркурия) как победитель III Всероссийского конкурса «Мастер бизнес-тренинга» (организаторами которого выступили Торгово-Промышленная Палата РФ, Международный институт менеджмента для объединений предпринимателей ТПП РФ и Некоммерческое партнерство «Сообщество бизнес-тренеров») в номинации «Мастер бизнес-тренер в области коммуникации и ораторского мастерства», а также «Мастер бизнес-тренинга» категории «А» (более 10 лет в профессии)»
-
-                                В 2020 - 2022 годах был приглашен организаторами Всероссийского конкурса «Мастер бизнес-тренинга» в состав членов жюри».
+                            <div class="services-articles">
+                                <div class="services-articles-title">
+                                    Упоминания в СМИ
+                                </div>
+                                <div class="services-articles-slider-wrap">
+                                    <div class="swiper slider-list-services-smi">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="text">
+                                                    <div class="title">
+                                                        Сократить по правилам. Чем грозит работодателю нарушение процедуры сокращения численности или штата работников организации и как избежать негативных последствий?
+                                                    </div>
+                                                    <div class="subtext">
+                                                        Издание Волгоградской торгово-промышленной палаты «Южный деловой вестник» № 6 (329) от «31» августа 2018 года, стр. 6
+                                                    </div>
+                                                </div>
+                                                <div class="img">
+                                                    <img src="img/image43.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="text">
+                                                    <div class="title">
+                                                        Здание Волгоградской торгово-промышленной палаты
+                                                    </div>
+                                                    <div class="subtext">
+                                                        Издание Волгоградской торгово-промышленной палаты «Южный деловой вестник» № 6 (329) от «31» августа 2018 года, стр. 6
+                                                    </div>
+                                                </div>
+                                                <div class="img">
+                                                    <img src="img/image43.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="text">
+                                                    <div class="title">
+                                                        Кроме того стоит отметить, что я являюсь автором 2 книг
+                                                    </div>
+                                                    <div class="subtext">
+                                                        Издание Волгоградской торгово-промышленной палаты «Южный деловой вестник» № 6 (329) от «31» августа 2018 года, стр. 6
+                                                    </div>
+                                                </div>
+                                                <div class="img">
+                                                    <img src="img/image43.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next services-button-next services-button-smi-next"></div>
+                                    <div class="swiper-button-prev services-button-prev services-button-smi-prev"></div>
+                                </div>
+                                <div class="btns">
+                                    <a href="#" class="btn btn-transparent">Другие статьи</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="container-fluid section-slider-wrap">
-                            <div class="container-second-fluid swiper slider-list-row">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                            <img src="img/image22.png">
+                            <div class="services-books">
+                                <div class="services-books-title">
+                                    Мастерская риторики
+                                </div>
+                                <div class="services-books-items">
+                                    <div class="services-books-item">
+                                        <img src="img/image41.png" alt="">
                                     </div>
-                                    <div class="swiper-slide">
-                                            <img src="img/image23.png">
-                                    </div>
-                                    <div class="swiper-slide">
-                                            <img src="img/image25.png">
-                                    </div>
-                                    <div class="swiper-slide">
-                                            <img src="img/2.png">
-                                    </div>
-                                    <div class="swiper-slide">
-                                            <img src="img/1.png">
+                                    <div class="services-books-item">
+                                        <img src="img/image42.png" alt="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-button-next next-slider-button"></div>
-                            <div class="swiper-button-prev prev-slider-button"></div>
                         </div>
                     </div>
-
                     <div class="section">
                         <div class="section-content">
-                            <div class="container-second-fluid section-title">
-                                Мои публикации
-                            </div>
-                            <div class="container-second-fluid section-text">
-                                Являюсь автором 2 книг «Дебиторская задолженность. Методы возврата, которые работают» и «7 золотых советов юриста», более 50 публикаций в СМИ по вопросам права, менеджмента и эффективных коммуникаций в таких изданиях как: «Корпоративный юрист», «Домашний адвокат», «Управление компанией», «Профессия «Директор», «Новости менеджмента», «Управление без правил», «Управление сбытом», «Справочник по управлению персоналом», «Консультант», а также Мастерской риторики и публичных выступлений «Меткое слово». 
-                                Кроме того имею большой опыт проведения различных деловых мероприятий и участия в качестве гостя-эксперта в телевизионных передачах. 
-                            </div>
-                            <div class="container-second-fluid section-buttons">
-                                <a href="#" class="btn">Мои публикации</a>
-                                <a href="#" class="btn">Сотрудничество со СМИ</a>
+                            <div class="container-fluid section-quote-blue">
+                                Мое профессиональное кредо можно выразить тремя словами: <br>
+                                <div class="strong">«Компетентность, конкретика, конструктивность».</div>
+                                О том, что это не просто слова, свидетельствуют многочисленные отзывы довольных клиентов
                             </div>
                         </div>
                     </div>
-
                     <div class="section">
                         <div class="section-content">
-                            <div class="container-second-fluid section-title">
-                                Мои увлечения
-                            </div>
-                            <div class="section-image-right">
-                                <img src="img/Rectangle4067.png" alt="">
-                            </div>
-                            <div class="container-second-fluid section-text">
-                                За рамками юриспруденции и управленческого консалтинга мне нравится проводить время с семьей и друзьями, читать книги, путешествовать. А еще значимое место в моей жизни занимают восточные единоборства. Изучаю вин чун (юнчуньцюань), а также интересуюсь хапкидо. Вин чун - это стиль традиционного ушу (кунгфу), который насчитывает более чем 300-летнюю историю. Он стал известен всему миру благодаря киноактеру и мастеру боевых искусств Брюсу Ли, а также его учителю Ип Ману. Что касается хапкидо, то это корейский стиль боевых искусств, сформировавшийся в середине 20 века. Имею 4 дуань (дан) по ушу и разряд «кандидат в мастера спорта по ушу», а также 1 дан по хапкидо.
-                                Чтение книг и путешествия позволяют получить расширяют кругозор и дарят новые впечатления. Общение с семьей и друзьями заряжает позитивом. Что касается единоборств, то регулярные тренировки дисциплинируют, а также формируют и поддерживают полезные личностные качества - целеустремлённость, настойчивость, трудолюбие,
-                                умение мотивировать себя, готовность работать на достижение результата.
-                                Мои увлечения дают возможность переключаться и отдыхать от профессиональной деятельности и вместе с тем способствуют ее ведению, потому как широкий кругозор, позитивный настрой, а также целеустремленность и трудолюбие помогают успешно решать задачи и развиваться как в юридической практике, так и в управленческом консалтинге. 
-                            </div>
+                            <h3>Отзывы</h3>
                         </div>
-                        <div class="container-fluid section-slider-wrap">
-                            <div class="container-second-fluid swiper slider-list-row">
+                        <div class="container-fluid section-slider-wrap-reviews">
+                            <div class="swiper slider-list-review">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="img/image32.png">
+                                        <div class="img">
+                                            <img src="img/image50.png" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <div class="title">
+                                                Шемпелев Сергей Геннадьевич
+                                            </div>
+                                            <div class="subtext">
+                                                Хочу выразить вам огромную благодарность за юридическую помощь в решении сложного квартирного вопроса, представление интересов в суде и консультации по различным юридическим вопросам.
+                                                Благодаря вашему профессионализму и нацеленности на достижение результата по всем вопросам с которыми я к вам обращался удалось добиться решения данных вопросов в мою пользу.
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="img/Rectangle4069.png">
+                                        <div class="img">
+                                            <img src="img/image51.png" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <div class="title">
+                                                Трушкин Юрий Александрович
+                                            </div>
+                                            <div class="subtext">
+                                                Уважаемый Алексей Сергеевич!Вы неоднократно оказывали высокопрофессиональную помощь мне и моей семье в решении сложных жизненных ситуаций.В далёком 2008 году, Вы помогли добиться возврата денежных средств от магазина за ноутбук, который неоднократно подвергался гарантийному ремонту и так и не был должным образом починен.
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="img/image25.png">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/2.png">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="img/1.png">
+                                        <div class="img">
+                                            <img src="img/image51.png" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <div class="title">
+                                                Трушкин Юрий Александрович
+                                            </div>
+                                            <div class="subtext">
+                                                Уважаемый Алексей Сергеевич!Вы неоднократно оказывали высокопрофессиональную помощь мне и моей семье в решении сложных жизненных ситуаций.В далёком 2008 году, Вы помогли добиться возврата денежных средств от магазина за ноутбук, который неоднократно подвергался гарантийному ремонту и так и не был должным образом починен.
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-button-next next-slider-button"></div>
-                            <div class="swiper-button-prev prev-slider-button"></div>
+                            <!--                                    <div class="swiper-button-next  next-slider-button next-slider-review-button"></div>-->
+                            <!--                                    <div class="swiper-button-prev  prev-slider-button prev-slider-review-button"></div>-->
                         </div>
                     </div>
-
-
                 </div>
-
         </main>
         <footer class="footer">
             <div class="container-second-fluid">
@@ -463,5 +499,6 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/front-page.js"></script>
 </body>
 </html>

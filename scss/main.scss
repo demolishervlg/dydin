@@ -20,6 +20,33 @@
         }
       }
 
+      &-filter {
+        width: 100%;
+        background: $gray_background-1;
+        border-radius: 8px;
+
+        .form {
+          padding: 24px 20px;
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+
+          .ss-main {
+            height: 48px;
+          }
+
+          .btn{
+            border-radius: 4px;
+            padding: 5px 12px;
+            img{
+              max-width: unset;
+            }
+          }
+
+        }
+
+      }
+
       &-title {
         font-weight: 800;
         font-size: 24px;
@@ -269,6 +296,23 @@
 
       }
 
+      &-quote-blue{
+        padding: 42px 173px;
+        border: 1px solid $gray_line;
+        border-radius: 8px;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 160%;
+        text-align: center;
+        color: #ffffff;
+        position: relative;
+        background-color: #1772E1;
+
+        .strong{
+          font-size: 32px;
+        }
+      }
+
 
       @media (max-width: 1440px) {
         &-slider-wrap {
@@ -288,6 +332,16 @@
           }
         }
 
+      }
+
+      @media (max-width: 950px) {
+        &-filter {
+          .form {
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 20px;
+          }
+        }
       }
 
       @media (max-width: 768px) {
@@ -311,18 +365,35 @@
       }
 
       @media (max-width: 425px) {
+        p{
+          text-align: left;
+        }
         &-title {
           padding: unset !important;
         }
         &-text {
+          text-align: left;
           padding: unset !important;
         }
 
+        ul {
+          text-align: left;
+        }
+
         &-quote{
+          text-align: left;
           padding: 42px 34px;
           font-size: 17px;
           &:before {
             font-size: 72px;
+          }
+
+          &-blue{
+            padding: 41px 12px;
+            font-size: 20px;
+            .strong{
+              font-size: 24px;
+            }
           }
         }
 
@@ -355,17 +426,11 @@
               margin-left: unset;
               text-align: left;
               &-title{
-                font-weight: 700;
-                font-size: 20px;
-                line-height: 160%;
-                color: $black_text;
+                font-size: 18px;
               }
               &-subtext{
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 160%;
-                text-align: justify;
-                color: $black_text
+                text-align: left;
+                font-size: 16px;
               }
             }
           }

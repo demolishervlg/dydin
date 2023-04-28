@@ -2,9 +2,40 @@
   &-partners{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 18px;
+    row-gap: 50px;
+    text-align: -webkit-center;
+
+    .partner{
+
+      .img{
+        max-width: 349px;
+        max-height: 231px;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 10px;
+        margin-bottom: 17px;
+      }
+
+      .name{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+      }
+
+    }
+
   }
-  &-partners{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  @media (max-width: 425px) {
+    &-partners{
+      grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+    }
   }
 }
+

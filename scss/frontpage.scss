@@ -1,0 +1,276 @@
+.front-page{
+  header {
+    position: relative;
+    .header-inner {
+      margin-bottom: unset;
+      .logo{
+        &-img{
+         display: none;
+        }
+        &-text{
+          margin-left: unset;
+          &-title{
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 100%;
+            color: #FFFFFF;
+          }
+          &-subtitle{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 160%;
+            color: #60BCFF;
+          }
+        }
+      }
+      .contacts{
+        .phone{
+          &-number{
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 160%;
+            text-align: right;
+            color: #FFFFFF;
+            &:hover{
+              color: $accent_orange;
+            }
+          }
+          .btn{
+            display: none;
+          }
+        }
+      }
+    }
+
+    .front-content{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .menu{
+        border: none;
+        position: absolute;
+        top: 98px;
+        left: 0;
+        &-list{
+          padding: unset;
+          border: none;
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+        }
+
+        &-item{
+          padding: unset;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 160%;
+          display: flex;
+          align-items: center;
+          a{
+            color: #FFFFFF;
+            &:hover{
+              color: $accent_orange;
+            }
+          }
+          &.active{
+            a{
+              color: $accent_orange;
+            }
+          }
+        }
+      }
+
+      .front-logo{
+        z-index: 1;
+      }
+
+      .front-form{
+        max-width: 396px;
+        position: absolute;
+        top: 98px;
+        right: 0;
+        z-index: 10;
+        background: rgba(0, 25, 64, 0.2);
+        box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.03);
+        border-radius: 16px;
+        padding: 40px 30px;
+        &-title{
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 120%;
+          text-transform: uppercase;
+          color: #FFFFFF;
+          margin-bottom: 22px;
+        }
+        .form{
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+          &-field{
+            border: unset;
+            background: #FFFFFF;
+            border-radius: 4px;
+            height: 48px;
+            padding-left: 13px;
+          }
+          &-field-textarea{
+            background: #FFFFFF;
+            border-radius: 4px;
+            height: 188px;
+            padding: 13px;
+          }
+          label{
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 120%;
+            color: #FFFFFF;
+          }
+          &-field-agree{
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            &+label {
+              display: inline-flex;
+              align-items: center;
+              user-select: none;
+            }
+            &+label::before {
+              background-color: #ffffff;
+              content: '';
+              display: inline-block;
+              width: 1em;
+              height: 1em;
+              flex-shrink: 0;
+              flex-grow: 0;
+              border: 1px solid #adb5bd;
+              border-radius: 0.25em;
+              margin-right: 0.5em;
+              background-repeat: no-repeat;
+              background-position: center center;
+              background-size: 50% 50%;
+            }
+            &:checked+label::before {
+              border-color: #0b76ef;
+              background-color: #0b76ef;
+              background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section{
+    &-front{
+      margin-top: 100px;
+      &-title{
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 120%;
+        color: $black_text;
+        margin-bottom: 30px;
+      }
+      &-subtitle{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 160%;
+        color: $gray_text;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .tabs>div {
+    /* скрыть контент по умолчанию */
+    display: none;
+    border: 1px solid $gray_line;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #fff;
+  }
+
+  .tabs>label {
+    font-size: 16px;
+    padding: 20px 65px;
+  }
+  .tabs>input[type="radio"]:checked+label {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  @media (max-width: 1024px) {
+    header {
+
+      .header-inner {
+        flex-wrap: unset;
+        flex-direction: row;
+        .logo{
+          &-text{
+            &-title{
+              margin-top: 10px;
+              font-size: 20px;
+            }
+            &-subtitle{
+              font-size: 14px;
+            }
+          }
+        }
+        .contacts{
+          .phone{
+            &-number{
+              display: block;
+            }
+            .btn{
+              display: block;
+              content: url("/img/subtract.svg");
+            }
+
+          }
+        }
+      }
+      .front-content{
+        .front-form{
+          display: none;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+
+    .header-inner {
+      .logo{
+        flex-direction: column;
+        &-img{
+          width: 72px;
+          height: 72px;
+        }
+        &-text{
+          text-align: center;
+          margin-left: unset;
+          &-title{
+            font-size: 18px;
+          }
+          &-subtitle{
+            display: block;
+          }
+        }
+      }
+      .contacts{
+        .phone{
+          margin-left: unset;
+        }
+      }
+    }
+
+    .tabs>label {
+      font-size: 12px;
+      padding: 13px 10px;
+    }
+  }
+
+}
