@@ -250,8 +250,6 @@
           height: 72px;
         }
         &-text{
-          text-align: center;
-          margin-left: unset;
           &-title{
             font-size: 18px;
           }
@@ -265,6 +263,52 @@
           margin-left: unset;
         }
       }
+    }
+
+    .tabs>label {
+      font-size: 12px;
+      padding: 13px 10px;
+    }
+  }
+
+  @media (max-width: 425px) {
+
+    .header-inner {
+      justify-content: center;
+      .slide-menu-button{
+        position: absolute;
+        top: -16px;
+        height: unset;
+        left: 18px;
+        .openbtn{
+        }
+      }
+      .logo{
+        margin-top: 55px;
+        flex-direction: column;
+        &-text{
+          &-title{
+            font-size: 24px !important;
+          }
+        }
+      }
+      .contacts{
+        position: absolute;
+        top: -4px;
+        right: 18px;
+        .phone{
+          .btn{
+          }
+          &-number{
+            display: none !important;
+          }
+          margin-left: unset;
+        }
+      }
+    }
+
+    .front-content{
+      margin-top: 20px;
     }
 
     .tabs>label {

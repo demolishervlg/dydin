@@ -9,8 +9,6 @@ $grid-breakpoints: (
 ) !default;
 
 
-
-
 $grid-gutter-width:24px !default;
 $transition-base:all .25s ease-out !default;
 $font-family-base:'Montserrat', sans-serif;
@@ -139,7 +137,13 @@ html, body {
   }
 
   &.front-page{
-    background: linear-gradient(180deg, #001A40 1%, #165DC5 5%, $gray_background-2 13%);
+    background: linear-gradient(180deg, #001A40 78px, #165DC5 548px, #F4F8FC 938px);
+  }
+
+  @media (max-width: 425px){
+    &.front-page{
+      background: linear-gradient(180deg, #001A40 36px, #165DC5 216px, #F4F8FC 519px);
+    }
   }
 
 }
@@ -516,6 +520,32 @@ h6, .h6 {
   }
 
 
+}
+
+.pop-up-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 31px;
+  text-align: center;
+  .form-group{
+    width: 100%;
+    .btn{
+      padding: 13px 49px;
+    }
+    .form-control{
+      padding: 10px;
+      background: #FFFFFF;
+      height: 48px;
+      width: 100%;
+      border: 1px solid #B3C8DB;
+      border-radius: 4px;
+    }
+    .form-control-textarea {
+      height: 128px;
+    }
+  }
 }
 
 
