@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
     <link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet"></link>
+    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="scss/popups.css">
 </head>
 </head>
 <body>
@@ -48,12 +50,12 @@
                         </div>
                         <div class="phone">
                             <a href="" class="phone-number">+7 (988)-960-01-01</a>
-                            <a href="#" class="btn">Связаться</a>
+                            <a href="#pp-call" class="popup-with-zoom btn" >Связаться</a>
                         </div>
                     </div>
                 </div>
                 <nav class="menu">
-                    <ul class="menu-list">
+                    <ul class="container-second-fluid menu-list">
                         <li class="menu-item active"><a href="#">Обо мне</a></li>
                         <li class="menu-item">
                             <a href="#">Услуги</a>
@@ -399,7 +401,35 @@
         </footer>
     </div>
 </div>
+
+<div id="pp-call" class="position-relative d-inline-block zoom-anim-dialog mfp-hide pp-call">
+    <div class="pp-call__inner">
+        <div class="pp-content">
+            <div class="h3">Оставить заявку на сайте</div>
+            <div class="pp-form">
+                <form action="#" class="pop-up-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="param-address" placeholder="Артур Белых">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="param-address" placeholder="+79954189449">
+                    </div>
+                    <div class="form-group">
+                        <textarea type="text" class="form-control form-control-textarea" placeholder="Какая помощь требуется"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn" value="Получить консультацию">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="/js/popups.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
