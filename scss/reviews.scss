@@ -1,5 +1,6 @@
 .section {
   &-reviews{
+    display: block !important;
     .reviews{
       display: flex;
       flex-direction: column;

@@ -84,6 +84,7 @@
   line-height: 160%;
   text-align: justify;
   color: #424242;
+  border-top: 1px solid $gray_line;
 }
 
 /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
@@ -98,7 +99,6 @@
   text-align: center;
   vertical-align: middle;
   user-select: none;
-  background-color: transparent;
   border: 1px solid $gray_line;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   cursor: pointer;
@@ -112,6 +112,7 @@
   opacity: 0.6;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  background-color: #E8EEF4;
 }
 
 .tabs>label:not(:first-of-type) {
@@ -123,6 +124,7 @@
   background-color: transparent;
   border-bottom: transparent;
   opacity: 1;
+  border-bottom: 1px solid $gray_background-2;
 }
 
 @media (max-width: 1024px) {
@@ -152,7 +154,7 @@
   &-books{
     width: 100%;
     max-width: 610px;
-    padding: 16px 38px;
+    padding: 32px 38px;
     background: #ffffff;
     border-radius: 4px;
     &-title{
@@ -178,7 +180,7 @@
   &-articles{
     width: 100%;
     max-width: 900px;
-    padding: 16px 78px;
+    padding: 32px 78px;
     background: #ffffff;
     border-radius: 4px;
     &-title{
@@ -220,10 +222,12 @@
       .services-button-next{
         right: var(--swiper-navigation-sides-offset,-51px);
         width: 24px;
+        --swiper-navigation-size: 30px;
       }
       .services-button-prev{
         left: var(--swiper-navigation-sides-offset,-51px);
-        width: 24px;
+        width: 30px;
+        --swiper-navigation-size: 30px;
       }
 
 

@@ -1,11 +1,9 @@
 .section{
   &-posts{
-    .container-second-fluid{
-      padding: 10px;
-    }
     background: #FFFFFF;
     border-radius: 8px;
     padding: 24px;
+    margin-bottom: 16px;
     &-title{
       font-weight: 800;
       font-size: 30px;
@@ -72,6 +70,10 @@
         }
       }
     }
-
   }
+  @media (max-width: 350px){
+  &-posts{
+    padding: 24px 10px;
+  }
+}
 }

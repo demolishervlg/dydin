@@ -1,6 +1,6 @@
 header{
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 47px;
   .header-inner {
     display: flex;
     flex-wrap: wrap;
@@ -36,7 +36,7 @@ header{
 
     .contacts{
       display: flex;
-      align-items: center;
+      align-items: flex-start;
 
       .social{
 
@@ -96,6 +96,7 @@ header{
       padding: 10px 3px;
       a{
         color: #424242;
+        font-weight: 500;
         &:hover{
           color: $accent_orange;
         }
@@ -103,8 +104,9 @@ header{
 
       &.active{
         a{
-          color: $accent_orange;
+          color: $gray_text-2;
         }
+        border-bottom: 2px solid $gray_text-2;
       }
 
       .submenu{
@@ -176,27 +178,76 @@ header{
       transition: 0.5s;
       display: grid;
       flex-wrap: wrap;
-      grid-template-columns: max-content 1fr;
-      overflow: hidden;
+      grid-template-columns: 1fr;
+      overflow: auto;
+
+      &-top{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 60px;
+        padding-left: 120px;
+        &-text{
+          margin-bottom: 60px;
+          .text{
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 100%;
+            color: $gray_line;
+          }
+          .subtext{
+            margin-top: 8px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 160%;
+            color: $brand_blue;
+          }
+        }
+
+        &-contacts{
+          margin-bottom: 20px;
+          .social-items{
+            display: flex;
+            gap: 20px;
+          }
+          .phone{
+            &-number{
+              margin-top: 18px;
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 160%;
+              display: flex;
+              align-items: center;
+              color: $gray_text;
+              &:hover {
+                color:$link-hover;
+              }
+
+            }
+          }
+        }
+      }
+
 
       &-content{
         &::-webkit-scrollbar {
           display: none;
         }
-        overflow: auto;
-        padding-top: 60px;
-        display: flex;
-        flex-wrap: wrap;
+        padding-left: 120px;
+        padding-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
         .sidebar-menu {
           &-list {
-            display: grid;
-            flex-wrap: wrap;
-            grid-template-columns: repeat(1, minmax(50px, max-content));
-            column-gap: 53px;
-            row-gap: 12px;
-            justify-content: center;
+            //display: grid;
+            //flex-wrap: wrap;
+            //grid-template-columns: repeat(1, minmax(50px, max-content));
+            //column-gap: 53px;
+            //row-gap: 12px;
+            //justify-content: center;
             list-style-type: none;
             margin: 0;
+            padding-inline-start: unset;
           }
 
           &-item {
@@ -283,9 +334,11 @@ header{
         height: 100%;
         flex-direction: column;
         padding: 12px;
+        position: absolute;
 
         .slide-logo{
           position: absolute;
+          top: 60px;
           img{
             width: 48px;
             height: 48px;
@@ -306,7 +359,11 @@ header{
 
         .closebtn:hover {
           transition: 120ms;
-          font-size: 62px;
+          color: $brand_blue;
+        }
+
+        &:hover {
+          border-right: 1px solid $brand_blue;
         }
 
       }
@@ -354,6 +411,7 @@ header{
             display: none;
           }
           .btn{
+            padding: 9px 18px;
             content: url("/img/subtract.svg");
           }
 
@@ -376,6 +434,20 @@ header{
         grid-template-columns: 1fr;
         overflow: auto;
 
+
+        &-top{
+          display: flex;
+          flex-wrap: wrap;
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-top: 20px;
+          gap: 20px;
+          &-text{
+            margin-bottom: unset;
+          }
+        }
+
+
         &-content{
           &::-webkit-scrollbar {
             display: none;
@@ -385,6 +457,7 @@ header{
           padding-bottom: 50px;
           display: flex;
           flex-wrap: wrap;
+          padding-left: 15px;
           .sidebar-menu {
             &-list {
               display: grid;
@@ -395,14 +468,15 @@ header{
               justify-content: center;
               list-style-type: none;
               margin: 0;
-              padding-left: 30px;
               padding-right: 15px;
             }
           }
         }
         .slide-closebtn{
-          padding: 0  0 0 30px;
+          padding: 0  0 0 15px;
           border-right: unset;
+          position: relative;
+
           .slide-logo{
             display: none;
           }

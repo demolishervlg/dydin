@@ -3,6 +3,7 @@
     position: relative;
     .header-inner {
       margin-bottom: unset;
+      align-items: flex-start;
       .logo{
         &-img{
          display: none;
@@ -22,13 +23,20 @@
             color: #60BCFF;
           }
         }
+        .phone{
+          display: none;
+        }
+        .social-items{
+          display: none;
+        }
+
       }
       .contacts{
         .phone{
           &-number{
             font-weight: 600;
             font-size: 32px;
-            line-height: 160%;
+            line-height: 100%;
             text-align: right;
             color: #FFFFFF;
             &:hover{
@@ -61,6 +69,7 @@
         }
 
         &-item{
+          border: none;
           padding: unset;
           font-weight: 500;
           font-size: 20px;
@@ -132,8 +141,8 @@
             opacity: 0;
             &+label {
               display: inline-flex;
-              align-items: center;
               user-select: none;
+              align-items: flex-start;
             }
             &+label::before {
               background-color: #ffffff;
@@ -185,12 +194,12 @@
     /* скрыть контент по умолчанию */
     display: none;
     border: 1px solid $gray_line;
-    padding: 10px 15px;
     font-size: 16px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     background-color: #fff;
+    padding: 40px 40px;
   }
 
   .tabs>label {
@@ -208,6 +217,7 @@
       .header-inner {
         flex-wrap: unset;
         flex-direction: row;
+        align-items: center;
         .logo{
           &-text{
             &-title{
@@ -290,11 +300,29 @@
           &-title{
             font-size: 24px !important;
           }
+          .phone{
+            margin-top: 10px;
+            display: block !important;
+            &-number{
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 120%;
+              text-align: center;
+              color: #FFFFFF;
+            }
+
+          }
+          .social-items{
+            margin-top: 15px;
+            display: flex !important;
+            gap: 15px;
+            justify-content: center
+          }
         }
       }
       .contacts{
         position: absolute;
-        top: -4px;
+        top: -14px;
         right: 18px;
         .phone{
           .btn{
