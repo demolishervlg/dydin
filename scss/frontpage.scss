@@ -1,6 +1,13 @@
 .front-page{
   header {
     position: relative;
+    margin-bottom: unset;
+    .container-fluid{
+      height: calc(100vh - 34px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
     .header-inner {
       margin-bottom: unset;
       align-items: flex-start;
@@ -51,6 +58,7 @@
     }
 
     .front-content{
+      width: 100%;
       position: relative;
       display: flex;
       flex-direction: row;
@@ -92,6 +100,9 @@
 
       .front-logo{
         z-index: 1;
+        &-img{
+          width: 100vh;
+        }
       }
 
       .front-form{
