@@ -1,0 +1,183 @@
+@charset "UTF-8";
+/*Для fade-эффекта при открытии фото-галереи*/
+html {
+  margin-right: 0 !important;
+  overflow: visible !important; }
+
+.mfp-ready .mfp-figure {
+  opacity: 0; }
+
+.mfp-zoom-in .mfp-figure, .mfp-zoom-in .mfp-iframe-holder .mfp-iframe-scaler {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95); }
+
+.mfp-zoom-in.mfp-bg,
+.mfp-zoom-in .mfp-preloader {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+.mfp-zoom-in.mfp-image-loaded .mfp-figure, .mfp-zoom-in.mfp-ready .mfp-iframe-holder .mfp-iframe-scaler {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
+
+.mfp-bg, .mfp-zoom-in.mfp-ready.mfp-bg,
+.mfp-zoom-in.mfp-ready .mfp-preloader {
+  opacity: 0.7; }
+
+.mfp-zoom-in.mfp-removing .mfp-figure, .mfp-zoom-in.mfp-removing .mfp-iframe-holder .mfp-iframe-scaler {
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  opacity: 0; }
+
+.mfp-zoom-in.mfp-removing.mfp-bg,
+.mfp-zoom-in.mfp-removing .mfp-preloader {
+  opacity: 0; }
+
+.mfp-iframe-scaler {
+  overflow: visible; }
+
+.mfp-zoom-out-cur {
+  cursor: auto; }
+
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: pointer; }
+
+.mfp-zoom-in.mfp-image-loaded .zoom-anim-dialog {
+  opacity: 1 !important;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
+
+.mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+  opacity: 0 !important;
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95); }
+
+.mfp-title {
+  font-size: 0.667rem; }
+
+.zoom-anim-dialog {
+  left: 50%;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  width: 550px;
+  margin: 0 0 0 -275px; }
+
+.mfp-figure .mfp-close {
+  top: 0 !important;
+  right: 0 !important; }
+  .mfp-figure .mfp-close:before {
+    color: #fff; }
+
+.mfp-close {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  opacity: 1;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif; }
+  .mfp-close:hover {
+    color: #E43636 !important; }
+
+.mfp-map-active {
+  overflow: hidden; }
+
+.pp-order {
+  font-family: 'Inter','Montserrat', 'Helvetica', 'Arial', sans-serif; }
+  .pp-order__inner {
+    position: relative; }
+    .pp-order__inner .pp-content {
+      position: relative;
+      background: #fff;
+      box-shadow: 0px 8px 28px rgba(32, 26, 26, 0.15);
+      border-radius: 0;
+      overflow: hidden;
+      padding: 30px; }
+  .pp-order .mfp-close {
+    background: none;
+    color: #B4B4B4;
+    top: 20px;
+    right: 20px; }
+  .pp-order h4, .pp-order .h4 {
+    line-height: 1;
+    padding: 21px 0 19px 0; }
+
+.pp-call {
+  font-family: 'Inter','Montserrat', 'Helvetica', 'Arial', sans-serif;
+  margin: auto;
+  width: 100%;
+  max-width: 1000px; }
+  .pp-call__inner {
+    position: relative; }
+    .pp-call__inner .pp-content {
+      position: relative;
+      background: #FFFFFF;
+      border: 1px solid #B3C8DB;
+      box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 60px;
+      width: 100%; }
+  .pp-call .mfp-close {
+    background: none;
+    color: #B4B4B4;
+    top: 20px;
+    right: 20px; }
+  .pp-call h4, .pp-call .h4 {
+    text-align: center;
+    line-height: 1;
+    padding: 21px 0 31px 0; }
+  .pp-call h3, .pp-call .h3 {
+    text-align: center;
+    line-height: 1;
+    padding: 21px 0 31px 0; }
+
+@media (max-width: 1229.98px) {
+  .pp-order {
+    width: 900px;
+    margin-left: -450px; }
+  .pp-call {
+    margin: auto;
+    width: 900px; } }
+
+@media (max-width: 1024.98px) {
+  .mfp-wrap {
+    overflow: auto; }
+  .pp-call {
+    width: 740px;
+    margin: auto; }
+    .pp-call h4, .pp-call .h4 {
+      padding: 5px 0 20px 0; }
+    .pp-call .mfp-close {
+      top: 0;
+      right: 0; } }
+
+@media (max-width: 768.98px) {
+  .pp-order {
+    width: 100%;
+    margin-left: 0;
+    left: 0; }
+    .pp-order__inner .pp-content {
+      padding: 16px; }
+  .pp-call {
+    width: 100%;
+    margin: auto;
+    left: 0; }
+    .pp-call__inner .pp-content {
+      padding: 16px; } }

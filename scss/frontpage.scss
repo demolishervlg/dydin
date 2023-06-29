@@ -2,7 +2,7 @@
   header {
     position: relative;
     margin-bottom: unset;
-    .container-fluid{
+    .container-header-fluid{
       height: calc(100vh - 34px);
       display: flex;
       flex-direction: column;
@@ -63,7 +63,7 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
-      .menu{
+      .front-menu{
         border: none;
         position: absolute;
         top: 98px;
@@ -99,16 +99,24 @@
       }
 
       .front-logo{
-        z-index: 1;
         &-img{
           width: 100vh;
+          @media (min-height: 670px) and (max-width: 500px){
+            max-width: 630px;
+          }
+          @media (min-height: 920px){
+            max-width: 100%;
+          }
         }
       }
 
       .front-form{
-        max-width: 396px;
+        max-width: 395px;
         position: absolute;
         top: 98px;
+        @media (max-width: 1370px) {
+          top: 0px;
+        }
         right: 0;
         z-index: 10;
         background: rgba(0, 25, 64, 0.2);
@@ -127,7 +135,12 @@
           display: flex;
           flex-direction: column;
           gap: 18px;
+
           &-field{
+            color: #7E92AE;
+            font-size: 16px;
+            font-family: Montserrat;
+            font-weight: 500;
             border: unset;
             background: #FFFFFF;
             border-radius: 4px;
@@ -139,6 +152,10 @@
             border-radius: 4px;
             height: 188px;
             padding: 13px;
+            color: #7E92AE;
+            font-size: 16px;
+            font-family: Montserrat;
+            font-weight: 500;
           }
           label{
             font-weight: 600;
@@ -150,10 +167,12 @@
             position: absolute;
             z-index: -1;
             opacity: 0;
+
             &+label {
               display: inline-flex;
               user-select: none;
               align-items: flex-start;
+              margin-bottom: 30px;
             }
             &+label::before {
               background-color: #ffffff;
@@ -201,30 +220,30 @@
     }
   }
 
-  .tabs>div {
-    /* скрыть контент по умолчанию */
-    display: none;
-    border: 1px solid $gray_line;
-    font-size: 16px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: #fff;
-    padding: 40px 40px;
+  @media (max-width: 1370px) {
+    header {
+      .header-inner {
+        .contacts{
+          .phone{
+            &-number{
+              display: block;
+            }
+            .btn{
+              display: block;
+            }
+          }
+        }
+        .front-content{
+          justify-content: flex-end;
+          .front-menu{
+            display: flex;
+          }
+        }
+      }
+    }
   }
-
-  .tabs>label {
-    font-size: 16px;
-    padding: 20px 65px;
-  }
-  .tabs>input[type="radio"]:checked+label {
-    background-color: #fff;
-    border-bottom: 1px solid #fff;
-  }
-
   @media (max-width: 1024px) {
     header {
-
       .header-inner {
         flex-wrap: unset;
         flex-direction: row;
@@ -233,10 +252,10 @@
           &-text{
             &-title{
               margin-top: 10px;
-              font-size: 20px;
+              font-size: 24px;
             }
             &-subtitle{
-              font-size: 14px;
+              font-size: 16px;
             }
           }
         }
@@ -244,16 +263,20 @@
           .phone{
             &-number{
               display: block;
+              font-size: 18px;
             }
             .btn{
               display: block;
-              content: url("/img/subtract.svg");
             }
 
           }
         }
       }
       .front-content{
+        justify-content: flex-end;
+        .front-menu{
+          display: flex;
+        }
         .front-form{
           display: none;
         }
@@ -261,98 +284,204 @@
     }
   }
   
-  @media (max-width: 768px) {
-
-    .header-inner {
-      .logo{
-        flex-direction: column;
-        &-img{
-          width: 72px;
-          height: 72px;
-        }
-        &-text{
-          &-title{
-            font-size: 18px;
+  @media (max-width: 914px) {
+    header {
+      .header-inner {
+        .slide-menu-button {
+          justify-content: flex-start;
+          position: fixed;
+          top: 43px;
+          left: 32px;
+          z-index: 1;
+          height: auto;
+          width: auto;
+          padding: 9px;
+          &:hover{
+            background-color: transparent;
           }
-          &-subtitle{
-            display: block;
+          .openbtn{
+            font-size: unset;
+          }
+        }
+        .logo {
+          flex-direction: column;
+
+          &-img {
+            width: 72px;
+            height: 72px;
+          }
+
+          &-text {
+            margin-top: unset;
+            &-title {
+              font-size: 18px;
+            }
+
+            &-subtitle {
+              display: block;
+            }
+          }
+        }
+        .contacts {
+          .phone-number {
+            display: none;
+          }
+          .btn {
+            content: url("/img/subtract.svg");
           }
         }
       }
-      .contacts{
-        .phone{
-          margin-left: unset;
+      .front-content {
+        justify-content: center;
+        .front-menu {
+          display: none;
         }
       }
-    }
-
-    .tabs>label {
-      font-size: 12px;
-      padding: 13px 10px;
     }
   }
 
-  @media (max-width: 425px) {
-
-    .header-inner {
-      justify-content: center;
-      .slide-menu-button{
-        position: absolute;
-        top: -16px;
-        height: unset;
-        left: 18px;
-        .openbtn{
-        }
+  @media (max-width: 914px) and (max-height: 430px){
+    header{
+      .container-header-fluid{
+        flex-direction: row;
       }
-      .logo{
-        margin-top: 55px;
+
+      .header-inner{
         flex-direction: column;
-        &-text{
-          &-title{
-            font-size: 24px !important;
+        align-items: flex-start;
+        height: fit-content;
+        gap: 38px;
+        margin-top: 71px;
+        .slide-menu-button{
+          justify-content: flex-start;
+          position: fixed;
+          top: 34px;
+          left: 32px;
+          z-index: 1;
+          height: auto;
+          .openbtn{
+            font-size: unset;
+          }
+        }
+        .logo{
+          &-text{
+            text-align: left;
+            &-title{
+              font-weight: 700;
+              font-size: 24px;
+            }
+          }
+        }
+        .contacts{
+          flex-direction: row-reverse;
+          gap: 20px;
+          align-items: center;
+          position: absolute;
+          bottom: 34px;
+          z-index: 10000;
+          .social-items{
+            display: flex;
           }
           .phone{
-            margin-top: 10px;
-            display: block !important;
             &-number{
-              font-weight: 700;
-              font-size: 18px;
-              line-height: 120%;
-              text-align: center;
-              color: #FFFFFF;
+              display: flex;
+              margin-bottom: unset;
+            }
+            .btn{
+              position: fixed;
+              top: 43px;
+              right: 32px;
+              z-index: 10000;
+            }
+          }
+        }
+      }
+      .front-content{
+        .front-logo{
+          img{
+            max-width: unset;
+          }
+        }
+      }
+    }
+  }
+
+
+  @media (max-width: 425px) {
+    header {
+      .header-inner {
+        justify-content: center;
+
+        .slide-menu-button {
+          position: fixed;
+          top: 21px;
+          height: unset;
+          left: 18px;
+          justify-content: flex-start;
+          z-index: 1;
+          .openbtn {
+            font-size: unset;
+          }
+        }
+
+        .logo {
+          margin-top: 55px;
+          flex-direction: column;
+
+          &-text {
+            &-title {
+              font-size: 24px !important;
             }
 
+            .phone {
+              margin-top: 10px;
+              display: block !important;
+
+              &-number {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 120%;
+                text-align: center;
+                color: #FFFFFF;
+              }
+
+            }
+
+            .social-items {
+              margin-top: 15px;
+              display: flex !important;
+              gap: 15px;
+              justify-content: center
+            }
           }
-          .social-items{
-            margin-top: 15px;
-            display: flex !important;
-            gap: 15px;
-            justify-content: center
+        }
+
+        .contacts {
+          position: absolute;
+          top: -14px;
+          right: 18px;
+
+          .phone {
+            .btn {
+              position: fixed;
+              top: 30px;
+              height: unset;
+              right: 18px;
+              z-index: 10000;
+            }
+
+            &-number {
+              display: none !important;
+            }
+
+            margin-left: unset;
           }
         }
       }
-      .contacts{
-        position: absolute;
-        top: -14px;
-        right: 18px;
-        .phone{
-          .btn{
-          }
-          &-number{
-            display: none !important;
-          }
-          margin-left: unset;
-        }
+
+      .front-content {
+        margin-top: 20px;
       }
-    }
-
-    .front-content{
-      margin-top: 20px;
-    }
-
-    .tabs>label {
-      font-size: 12px;
-      padding: 13px 10px;
     }
   }
 

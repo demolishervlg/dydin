@@ -10,13 +10,26 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function () {
+    $('.accordion-tabs').children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+    $('.accordion-tabs').on('click', 'li > a', function(event) {
+        if (!$(this).hasClass('is-active')) {
+            event.preventDefault();
+            $('.accordion-tabs .is-open').removeClass('is-open').hide();
+            $(this).next().toggleClass('is-open').toggle();
+            $('.accordion-tabs').find('.is-active').removeClass('is-active');
+            $(this).addClass('is-active');
+        } else {
+            event.preventDefault();
+        }
+    });
+});
+
 
 function openNav() {
     document.getElementById("mySidebar").style.width = "85%";
 }
 
-
-/* Установите ширину боковой панели в 0 (скройте ее) */
 function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
 }
@@ -92,6 +105,22 @@ $(function(){
 
 })
 
-
+var slidemenubutton = $('.slide-menu-button');
+slidemenubutton.css('background', 'transparent');
+$(document).ready(function () {
+if($(window).width() < 914){
+    $(window).scroll(function () {
+        let bodyScroll = $(window).scrollTop();
+        let offsetHeight = $('header').innerHeight();
+        if (bodyScroll >= offsetHeight) {
+            slidemenubutton.css('background', '#ffffff');
+        } else {
+            slidemenubutton.css('background', 'transparent');
+        }
+    });
+}else{
+    slidemenubutton.css('background', 'transparent');
+};
+});
 
 

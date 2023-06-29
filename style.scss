@@ -61,34 +61,86 @@ $accent_orange: #FFA735;
 .container-second-fluid {
   max-width: 1350px;
   margin:0 auto;
-  padding: 0 30px 0 30px;
+  //padding: 0 30px 0 30px;
+}
+
+.container-header-fluid {
+  max-width: 1600px ;
+  margin:0 auto ;
+  padding: 0 30px 0 30px ;
 }
 
 @media (max-width: 1740px){
   .container-fluid {
     max-width: 1600px ;
     margin:0 auto ;
+    padding: 0 30px 0 128px ;
+  }
+  .container-second-fluid {
+    max-width: 1600px ;
+    margin:0 auto ;
+    padding: 0 30px 0 128px ;
+  }
+
+  .container-header-fluid {
+    max-width: 1600px ;
+    margin:0 auto ;
     padding: 0 128px 0 128px ;
+  }
+
+}
+
+@media (max-width: 1370px){
+  .container-fluid {
+    max-width: 1600px ;
+    margin:0 auto ;
+    padding: 0 19px 0 128px ;
   }
   .container-second-fluid {
     max-width: 1350px ;
     margin:0 auto ;
-    padding: 0 128px 0 128px ;
+    padding: 0 19px 0 128px ;
   }
+
+  .container-header-fluid {
+    max-width: 1600px ;
+    margin:0 auto ;
+    padding: 0 19px 0 19px ;
+  }
+
 }
 
 @media (max-width: 1024px){
   .container-fluid {
     max-width: 1600px ;
     margin:0 auto ;
-    padding: 0 30px 0 30px ;
+    padding: 0 30px 0 102px ;
   }
   .container-second-fluid {
     max-width: 1350px ;
     margin:0 auto ;
-    padding: 0 30px 0 30px ;
+    padding: 0 30px 0 102px ;
+  }
+
+  .container-header-fluid {
+    max-width: 1600px ;
+    margin:0 auto ;
+    padding: 0 32px 0 32px ;
   }
 }
+@media (max-width: 914px){
+  .container-fluid {
+    max-width: 1600px ;
+    margin:0 auto ;
+    padding: 0 22px 0 22px ;
+  }
+  .container-second-fluid {
+    max-width: 1350px ;
+    margin:0 auto ;
+    padding: 0 22px 0 22px ;
+  }
+}
+
 @media (max-width: 425px){
   .container-fluid {
     max-width: 1600px ;
@@ -140,7 +192,13 @@ html, body {
     background: linear-gradient(180deg, #001A40 78px, #165DC5 548px, #F4F8FC 938px);
   }
 
-  @media (max-width: 425px){
+  @media (max-width: 914px) and (max-height: 430px) {
+    &.front-page {
+      background: linear-gradient(180deg, #001A40 19px, #165DC5 207px, #F4F8FC 509px);
+    }
+  }
+
+    @media (max-width: 425px){
 
     background: linear-gradient(to bottom, #D4E6FF, $gray_background-2 320px);
 
@@ -159,6 +217,7 @@ html, body {
 a {
   text-decoration:none;
   color:$link;
+
   &:hover {
     color:$link-hover;
     border-bottom-color:transparent;
@@ -184,6 +243,29 @@ a {
       }
     }
 
+  }
+
+  @media (max-width: 640px) {
+    &.tabs-icon .is-active {
+      &:before {
+        background: url(img/Caret_Down_SM.svg) no-repeat center;
+      }
+    }
+
+    &.tabs-icon{
+      position: relative;
+      padding-left: 35px;
+      display: flex;
+      &:before {
+        content: '';
+        position: absolute;
+        background: url(img/Caret_Up_SM.svg) no-repeat center;
+        right: 20px;
+        top: 33%;
+        height: 20px; width: 20px;
+        text-align: center;
+      }
+    }
   }
 
   &.site{
@@ -454,15 +536,32 @@ h6, .h6 {
 
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1740px){
   .slide-menu-button{
-    position: relative;
-    border-right: unset;
-    padding: unset;
+    width: 103px;
+    justify-content: center;
     &:hover {
       transition: 120ms;
-      background-color: transparent;
-      border-right: unset;
+    }
+  }
+}
+
+@media (max-width: 1370px){
+  .slide-menu-button{
+    width: 103px;
+    justify-content: center;
+    &:hover {
+      transition: 120ms;
+    }
+  }
+}
+
+@media (max-width: 1024px){
+  .slide-menu-button{
+    width: 72px;
+    justify-content: center;
+    &:hover {
+      transition: 120ms;
     }
   }
 }
@@ -477,6 +576,7 @@ h6, .h6 {
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 15px;
+    background-size: cover;
     &:hover{
       opacity: 0.7;
     }
@@ -491,6 +591,7 @@ h6, .h6 {
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 15px;
+    background-size: cover;
     &:hover{
       opacity: 0.7;
     }
@@ -505,6 +606,7 @@ h6, .h6 {
     background-position: bottom;
     background-repeat: no-repeat;
     border-radius: 15px;
+    background-size: cover;
     &:hover{
       opacity: 0.7;
     }
@@ -516,6 +618,7 @@ h6, .h6 {
     background-image: url("img/social-tc.svg");
     background-position: bottom;
     background-repeat: no-repeat;
+    background-size: cover;
     &:hover{
       opacity: 0.7;
     }
@@ -530,6 +633,7 @@ h6, .h6 {
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 15px;
+    background-size: cover;
     &:hover{
       opacity: 0.7;
     }
@@ -544,8 +648,39 @@ h6, .h6 {
     height: 32px;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     &:hover{
       opacity: 0.7;
+    }
+  }
+  @media (max-width: 1280px) {
+    &-ok {
+      width: 24px;
+      height: 24px;
+    }
+
+    &-vk {
+      width: 24px;
+      height: 24px;
+    }
+
+    &-fb {
+      width: 24px;
+      height: 24px;
+    }
+
+    &-tc {
+      width: 24px;
+    }
+
+    &-tg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &-inst {
+      height: 24px;
+      width: 24px;
     }
   }
 }

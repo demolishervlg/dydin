@@ -18,7 +18,7 @@
 <div class="all front-page">
     <div class="wrapper">
         <header class="header-main">
-            <div class="container-fluid">
+            <div class="container-header-fluid">
                 <div class="header-inner">
                     <div class="slide-menu-button">
                         <button class="openbtn" onclick="openNav()"><img src="img/burger.svg"></button>
@@ -62,16 +62,16 @@
                     </div>
                 </div>
                 <div class="front-content">
-                    <nav class="menu">
-                        <ul class="menu-list">
-                            <li class="menu-item active"><a href="#">Обо мне</a></li>
-                            <li class="menu-item"><a href="#">Услуги</a></li>
-                            <li class="menu-item"><a href="#">Публикации</a></li>
-                            <li class="menu-item"><a href="#">Упоминания в СМИ</a></li>
-                            <li class="menu-item"><a href="#">Партнёры</a></li>
-                            <li class="menu-item"><a href="#">Полезная информация</a></li>
-                            <li class="menu-item"><a href="#">Отзывы</a></li>
-                            <li class="menu-item"><a href="#">Контакты </a></li>
+                    <nav class="front-menu">
+                        <ul class="front-menu-list">
+                            <li class="front-menu-item active"><a href="#">Обо мне</a></li>
+                            <li class="front-menu-item"><a href="#">Услуги</a></li>
+                            <li class="front-menu-item"><a href="#">Публикации</a></li>
+                            <li class="front-menu-item"><a href="#">Упоминания в СМИ</a></li>
+                            <li class="front-menu-item"><a href="#">Партнёры</a></li>
+                            <li class="front-menu-item"><a href="#">Полезная информация</a></li>
+                            <li class="front-menu-item"><a href="#">Отзывы</a></li>
+                            <li class="front-menu-item"><a href="#">Контакты </a></li>
                         </ul>
                     </nav>
                     <div class="front-logo">
@@ -86,7 +86,7 @@
                             <input type="text" class="form-field" placeholder="Номер телефона">
                             <textarea class="form-field-textarea" placeholder="Какая помощь требуется"></textarea>
                             <input id="agree" class="form-field-agree" type="checkbox" name="" ><label for="agree">Вы подтверждаете, что ознакомились с положением о защите персональных данных и даете согласие на их обработку*</label>
-                            <input type="submit" class="btn" value="Получить консультацию">
+                            <input type="submit" class="btn" style="width: 100%; height: 48px" value="Получить консультацию">
                         </div>
                     </div>
                 </div>
@@ -207,33 +207,28 @@
                         <div class="section-front-title">
                             Услуги, которые я оказываю
                         </div>
-                            <div class="tabs">
-                                <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
-                                <label for="tab-btn-1">Юридические услуги</label>
-                                <input type="radio" name="tab-btn" id="tab-btn-2" value="">
-                                <label for="tab-btn-2">Управленческий консалтинг</label>
-                                <div id="content-1">
-                                    <div class="section">
-                                        <div class="section-content">
-                                            <div class="section-text">
-                                                В рамках юридической практики мне доводилось решать самые разные правовые задачи как в интересах бизнеса, так и частных лиц. Вместе с тем, основными направлениями моей деятельности являются:
-                                                консультирование по юридическим вопросам (в том числе с предварительным изучением документов заказчика),
-                                                юридическое сопровождение коммерческих сделок (купли-продажи, поставки, подряда, оказания услуг, агентирования и других),
-                                                оказание помощи во внесудебном урегулировании экономических, имущественных и трудовых споров (путем использования переговорных и медиативных технологий, а также путем ведения переписки),
-                                                защита интересов в арбитражных судах и судах общей юрисдикции по экономическим, имущественным и трудовым спорам (путем подготовки необходимых процессуальных документов, а также путем участия в судебных заседаниях).
-                                            </div>
-                                            <div class="section-buttons">
-                                                <a href="#" class="btn btn-transparent-radius">Подробнее</a>
-                                                <a href="#" class="btn">Получить консультацию</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="content-2">
-                                    Содержимое 2...
-                                </div>
-                            </div>
-                    </div>
+                        <div class="container-tab">
+                            <ul class="accordion-tabs">
+                                <li class="tab-head-cont">
+                                    <a href="#" class="is-active tabs-icon">Юридические услуги</a>
+                                    <section>
+                                        <p>В рамках юридической практики мне доводилось решать самые разные правовые задачи как в интересах бизнеса, так и частных лиц. Вместе с тем, основными направлениями моей деятельности являются:</p>
+                                        <ul>
+                                            <li>консультирование по юридическим вопросам (в том числе с предварительным изучением документов заказчика),</li>
+                                            <li>юридическое сопровождение коммерческих сделок (купли-продажи, поставки, подряда, оказания услуг, агентирования и других),</li>
+                                            <li>оказание помощи во внесудебном урегулировании экономических, имущественных и трудовых споров (путем использования переговорных и медиативных технологий, а также путем ведения переписки),</li>
+                                            <li>защита интересов в арбитражных судах и судах общей юрисдикции по экономическим, имущественным и трудовым спорам (путем подготовки необходимых процессуальных документов, а также путем участия в судебных заседаниях).</li>
+                                        </ul>
+                                    </section>
+                                </li>
+                                <li class="tab-head-cont">
+                                    <a href="#" class="tabs-icon">Управленческий консалтинг</a>
+                                    <section>
+                                        <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло. Его многочисленные, убого тонкие по сравнению с остальным телом ножки беспомощно копошились у него перед глазами. «Что со мной случилось?» – подумал он. Это не было сном. Его комната, настоящая, разве что слишком маленькая, но обычная комната, мирно покоилась в своих четырех хорошо знакомых стенах.</p>
+                                    </section>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="section-front">
                         <div class="section-front-title">
@@ -265,9 +260,9 @@
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="text">
-                                                    <div class="title">
+                                                    <a href="#" class="title">
                                                         Сократить по правилам. Чем грозит работодателю нарушение процедуры сокращения численности или штата работников организации и как избежать негативных последствий?
-                                                    </div>
+                                                    </a>
                                                     <div class="subtext">
                                                         Издание Волгоградской торгово-промышленной палаты «Южный деловой вестник» № 6 (329) от «31» августа 2018 года, стр. 6
                                                     </div>
@@ -278,9 +273,9 @@
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="text">
-                                                    <div class="title">
+                                                    <a href="#" class="title">
                                                         Здание Волгоградской торгово-промышленной палаты
-                                                    </div>
+                                                    </a>
                                                     <div class="subtext">
                                                         Издание Волгоградской торгово-промышленной палаты «Южный деловой вестник» № 6 (329) от «31» августа 2018 года, стр. 6
                                                     </div>
@@ -291,9 +286,9 @@
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="text">
-                                                    <div class="title">
+                                                    <a href="#" class="title">
                                                         Кроме того стоит отметить, что я являюсь автором 2 книг
-                                                    </div>
+                                                    </a>
                                                     <div class="subtext">
                                                         Издание Волгоградской торгово-промышленной палаты «Южный деловой вестник» № 6 (329) от «31» августа 2018 года, стр. 6
                                                     </div>
@@ -321,9 +316,9 @@
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="text">
-                                                    <div class="title">
+                                                    <a href="#" class="title">
                                                         Сократить по правилам. Чем грозит работодателю нарушение процедуры сокращения численности или штата работников организации и как избежать негативных последствий?
-                                                    </div>
+                                                    </a>
                                                     <div class="subtext">
                                                         Издание Волгоградской торгово-промышленной палаты «Южный деловой вестник» № 6 (329) от «31» августа 2018 года, стр. 6
                                                     </div>
@@ -333,23 +328,23 @@
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
-                                                <div class="text">
+                                                <a href="#" class="text">
                                                     <div class="title">
                                                         Здание Волгоградской торгово-промышленной палаты
                                                     </div>
                                                     <div class="subtext">
                                                         Издание Волгоградской торгово-промышленной палаты «Южный деловой вестник» № 6 (329) от «31» августа 2018 года, стр. 6
                                                     </div>
-                                                </div>
+                                                </a>
                                                 <div class="img">
                                                     <img src="img/image43.png" alt="">
                                                 </div>
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="text">
-                                                    <div class="title">
+                                                    <a href="#" class="title">
                                                         Кроме того стоит отметить, что я являюсь автором 2 книг
-                                                    </div>
+                                                    </a>
                                                     <div class="subtext">
                                                         Издание Волгоградской торгово-промышленной палаты «Южный деловой вестник» № 6 (329) от «31» августа 2018 года, стр. 6
                                                     </div>

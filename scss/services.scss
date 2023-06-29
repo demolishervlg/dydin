@@ -67,6 +67,156 @@
 }
 
 
+.container-tab{
+
+}
+/* TABS */
+.accordion-tabs {
+  *zoom: 1;
+  width: 100%;
+  border: 1px solid #B3C8DB;
+  border-radius: 0.1875em;
+  margin-bottom: 1.5em;
+  margin-left:0;
+  padding-left:0;
+}
+.accordion-tabs:before,
+.accordion-tabs:after {
+  content: " ";
+  display: table;
+}
+.accordion-tabs:after {
+  clear: both;
+}
+.tab-head-cont{
+  list-style:none;
+}
+.accordion-tabs li.tab-head-cont:last-child a {
+  border-bottom-left-radius: 0.1875em;
+  border-bottom-right-radius: 0.1875em;
+}
+.accordion-tabs li.tab-head-cont a {
+  text-decoration:none;
+  border-top: 1px solid #B3C8DB;
+  color: #888888;
+  padding: 0.75em 1.9em;
+  position: relative;
+  display: flex;
+}
+.accordion-tabs li.tab-head-cont a:hover {
+  color: #000000;
+}
+.accordion-tabs li.tab-head-cont a:focus {
+  outline: none;
+}
+.accordion-tabs li.tab-head-cont a.is-active {
+  background-color: #f7f7f7;
+  border-bottom: 0;
+  color:#333333;
+}
+.accordion-tabs li.tab-head-cont section {
+  padding: 1.5em 1.618em;
+  background: #f7f7f7;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+}
+
+
+@media (max-width: 640px) {
+  /* TABS */
+  .accordion-tabs {
+    border: unset;
+  }
+  .tab-head-cont{
+    border: 2px solid #B3C8DB;
+    border-radius: 20px;
+    margin-top: 10px;
+  }
+  .accordion-tabs li.tab-head-cont a.is-active{
+    &:before {
+      background: url(img/Caret_Down_SM.svg) no-repeat center;
+    }
+  }
+  .accordion-tabs li.tab-head-cont a {
+    color: #424242;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 160%;
+    border-radius: 20px;
+    border-top: unset;
+    &:before {
+      content: '';
+      position: absolute;
+      background: url(img/Caret_Up_SM.svg) no-repeat center;
+      right: 20px;
+      top: 33%;
+      height: 20px; width: 20px;
+      text-align: center;
+    }
+  }
+  .accordion-tabs li.tab-head-cont section {
+    padding: 0.75em 0.809em;
+    color: #424242;
+    font-size: 20px;
+    line-height: 120%;
+    border-radius: 20px;
+  }
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 640px) {
+  .accordion-tabs {
+    border: none;
+    position: relative;
+  }
+  .accordion-tabs li.tab-head-cont {
+    display: inline;
+  }
+  .accordion-tabs li.tab-head-cont:last-child a {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .accordion-tabs li.tab-head-cont a {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    border-left: 1px solid #B3C8DB;
+    border-right: 1px solid #B3C8DB;
+    border-top-right-radius: 0.6em;
+    border-top-left-radius: 0.6em;
+    background-color: #E8EEF4;
+    color: #7E92AE;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 160%;
+  }
+  .accordion-tabs li.tab-head-cont a.is-active {
+    background-color: #f7f7f7;
+    border: 1px solid #B3C8DB;
+    border-bottom: 1px solid #f7f7f7;
+    margin-bottom: -1px;
+    border-top-right-radius: 0.6em;
+    border-top-left-radius: 0.6em;
+    color: #424242;
+  }
+  .accordion-tabs li.tab-head-cont section {
+    border-bottom-left-radius: 0.6em;
+    border-bottom-right-radius: 0.6em;
+    border-top-right-radius: 0.6em;
+    border: 1px solid #B3C8DB;
+    float: left;
+    left: 0;
+    padding: 0.75em 0.809em;
+    color: #424242;
+    font-size: 20px;
+    line-height: 160%;
+  }
+}
+
 .tabs {
   font-size: 0;
   margin-left: auto;
@@ -105,7 +255,7 @@
   position: relative;
   top: 1px;
   padding: 24px 120px;
-  font-weight: 800;
+  font-weight: 500;
   font-size: 24px;
   line-height: 160%;
   color: $black_text;
@@ -172,7 +322,10 @@
     }
 
     &-item{
-
+      width: 100%;
+      img{
+        width: 100%;
+      }
     }
 
   }
@@ -202,7 +355,6 @@
             font-weight: 400;
             font-size: 20px;
             line-height: 160%;
-            color: $brand_blue;
             margin-bottom: 12px;
           }
           .subtext{
@@ -222,12 +374,18 @@
       .services-button-next{
         right: var(--swiper-navigation-sides-offset,-51px);
         width: 24px;
+        &:hover{
+          color:$link-hover;
+        }
         --swiper-navigation-size: 30px;
       }
       .services-button-prev{
         left: var(--swiper-navigation-sides-offset,-51px);
         width: 30px;
         --swiper-navigation-size: 30px;
+        &:hover{
+          color:$link-hover;
+        }
       }
 
 
