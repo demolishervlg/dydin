@@ -27,7 +27,11 @@ $(document).ready(function () {
 
 
 function openNav() {
-    document.getElementById("mySidebar").style.width = "85%";
+    if($(window).width() < 1230){
+        document.getElementById("mySidebar").style.width = "95%";
+    }else {
+        document.getElementById("mySidebar").style.width = "85%";
+    }
 }
 
 function closeNav() {

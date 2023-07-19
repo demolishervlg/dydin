@@ -294,14 +294,21 @@
 .services {
 
   &-sections{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     gap: 20px;
-    justify-content: space-between;
-
+    grid-auto-flow: dense;
+    z-index: 0;
+    @media (max-width: 1366px) {
+      grid-auto-flow: row;
+    }
   }
 
   &-books{
+    grid-column: span 5;
+    @media (max-width: 1366px) {
+      grid-column: span 12;
+    }
     width: 100%;
     max-width: 610px;
     padding: 32px 38px;
@@ -331,6 +338,10 @@
   }
 
   &-articles{
+    grid-column: span 7;
+    @media (max-width: 1366px) {
+      grid-column: span 12;
+    }
     width: 100%;
     max-width: 900px;
     padding: 32px 78px;
@@ -374,6 +385,7 @@
       .services-button-next{
         right: var(--swiper-navigation-sides-offset,-51px);
         width: 24px;
+        color: $gray_line;
         &:hover{
           color:$link-hover;
         }
@@ -382,6 +394,7 @@
       .services-button-prev{
         left: var(--swiper-navigation-sides-offset,-51px);
         width: 30px;
+        color: $gray_line;
         --swiper-navigation-size: 30px;
         &:hover{
           color:$link-hover;
@@ -419,6 +432,13 @@
       align-items: center;
       justify-content: center;
       width: 100%;
+      .btn{
+        border-color: $gray-text-2;
+        color: $gray-text-2;
+        width: 100%;
+        padding: 10px 0;
+        max-width: 252px;
+      }
     }
 
   }

@@ -230,7 +230,6 @@ header{
         padding-top: 60px;
         padding-left: 120px;
         &-text{
-          margin-bottom: 60px;
           .text{
             font-weight: 700;
             font-size: 24px;
@@ -247,7 +246,6 @@ header{
         }
 
         &-contacts{
-          margin-bottom: 20px;
           .social-items{
             display: flex;
             gap: 20px;
@@ -276,7 +274,7 @@ header{
           display: none;
         }
         padding-left: 120px;
-        padding-top: 40px;
+        padding-top: 64px;
         display: grid;
         grid-template-columns: 1fr 1fr;
 
@@ -340,7 +338,7 @@ header{
                 }
 
                 .sidebar-submenuTree {
-                  padding: 5px 15px;
+                  padding: 15px 0;
 
                   &-item {
                     list-style-type: none;
@@ -389,6 +387,7 @@ header{
         }
 
         .closebtn {
+          content: url("../img/exit.svg");
           font-size: 58px;
           cursor: pointer;
           background-color: transparent;
@@ -447,12 +446,8 @@ header{
         &-top{
           display: flex;
           flex-wrap: wrap;
-          padding-left: 15px;
-          padding-right: 15px;
-          padding-top: 20px;
-          gap: 20px;
           &-text{
-            margin-bottom: unset;
+            margin-right: 103px;
           }
         }
 
@@ -461,12 +456,8 @@ header{
           &::-webkit-scrollbar {
             display: none;
           }
-          overflow: unset;
-          padding-top: unset;
-          padding-bottom: 50px;
           display: flex;
           flex-wrap: wrap;
-          padding-left: 15px;
           .sidebar-menu {
             &-list {
               display: grid;
@@ -480,20 +471,6 @@ header{
               padding-right: 15px;
             }
           }
-        }
-        .slide-closebtn{
-          padding: 0  0 0 15px;
-          border-right: unset;
-          position: relative;
-
-          .slide-logo{
-            display: none;
-          }
-          .closebtn {
-            margin: unset;
-            padding: unset;
-          }
-
         }
       }
       @media screen and (max-height: 450px) {

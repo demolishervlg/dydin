@@ -93,12 +93,12 @@
             </div>
             <div class="slide-menu">
                 <div id="mySidebar" class="sidebar">
-                    <div class="slide-closebtn">
+                    <a href="javascript:void(0)" onclick="closeNav()" class="slide-closebtn">
                         <div class="slide-logo">
                             <img class="img" src="img/logo.svg">
                         </div>
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                    </div>
+                        <div class="closebtn"></div>
+                    </a>
                     <div class="sidebar-top">
                         <div class="sidebar-top-text">
                             <div class="text">
@@ -114,6 +114,7 @@
                                 <a class="social-item social-vk" href="#"></a>
                                 <a class="social-item social-fb" href="#"></a>
                                 <a class="social-item social-inst" href="#"></a>
+                                <a class="social-item social-tg" href="#"></a>
                                 <a class="social-item social-tg" href="#"></a>
                             </div>
                             <div class="phone">
@@ -390,8 +391,8 @@
                         <div class="section-content">
                             <h3>Отзывы</h3>
                         </div>
-                        <div class="container-fluid section-slider-wrap-reviews">
-                            <div class="swiper slider-list-review">
+                        <div class="section-slider-wrap-reviews">
+                            <div class="container-fluid swiper slider-list-review">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="img">
@@ -409,34 +410,36 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="img">
-                                            <img src="img/image51.png" alt="">
+                                            <img src="img/image50.png" alt="">
                                         </div>
                                         <div class="text">
                                             <div class="title">
-                                                Трушкин Юрий Александрович
+                                                Шемпелев Сергей Геннадьевич
                                             </div>
                                             <div class="subtext">
-                                                Уважаемый Алексей Сергеевич!Вы неоднократно оказывали высокопрофессиональную помощь мне и моей семье в решении сложных жизненных ситуаций.В далёком 2008 году, Вы помогли добиться возврата денежных средств от магазина за ноутбук, который неоднократно подвергался гарантийному ремонту и так и не был должным образом починен.
+                                                Хочу выразить вам огромную благодарность за юридическую помощь в решении сложного квартирного вопроса, представление интересов в суде и консультации по различным юридическим вопросам.
+                                                Благодаря вашему профессионализму и нацеленности на достижение результата по всем вопросам с которыми я к вам обращался удалось добиться решения данных вопросов в мою пользу.
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="img">
-                                            <img src="img/image51.png" alt="">
+                                            <img src="img/image50.png" alt="">
                                         </div>
                                         <div class="text">
                                             <div class="title">
-                                                Трушкин Юрий Александрович
+                                                Шемпелев Сергей Геннадьевич
                                             </div>
                                             <div class="subtext">
-                                                Уважаемый Алексей Сергеевич!Вы неоднократно оказывали высокопрофессиональную помощь мне и моей семье в решении сложных жизненных ситуаций.В далёком 2008 году, Вы помогли добиться возврата денежных средств от магазина за ноутбук, который неоднократно подвергался гарантийному ремонту и так и не был должным образом починен.
+                                                Хочу выразить вам огромную благодарность за юридическую помощь в решении сложного квартирного вопроса, представление интересов в суде и консультации по различным юридическим вопросам.
+                                                Благодаря вашему профессионализму и нацеленности на достижение результата по всем вопросам с которыми я к вам обращался удалось добиться решения данных вопросов в мою пользу.
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!--                                    <div class="swiper-button-next  next-slider-button next-slider-review-button"></div>-->
-                            <!--                                    <div class="swiper-button-prev  prev-slider-button prev-slider-review-button"></div>-->
+                            <div class="swiper-button-next next-slider-button next-slider-review-button"></div>
+                            <div class="swiper-button-prev prev-slider-button prev-slider-review-button"></div>
                         </div>
                     </div>
                 </div>
@@ -494,22 +497,24 @@
                 </div>
                 <div class="section-main-footer">
                     <div class="copyright">
-                        <p><span>© Алексей Дудин, 2008-2023.</span>
-                            <br>
-                            <br>
+                        <div class="copyright-block">
+                            <span>© Алексей Дудин, 2008-2023.</span>
+                            <div class="social">
+                                <div class="social-items">
+                                    <a class="social-item social-ok" href="#"></a>
+                                    <a class="social-item social-vk" href="#"></a>
+                                    <a class="social-item social-fb" href="#"></a>
+                                    <a class="social-item social-tc" href="#"></a>
+                                    <a class="social-item social-inst" href="#"></a>
+                                    <a class="social-item social-tg" href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
                             Информация, размещенная на сайте, не является публичной офертой.
                             Перепечатка или любой иной вид републикации материалов сайта возможен только с согласия его правообладателя.
                         </p>
-                        <div class="social">
-                            <div class="social-items">
-                                <a class="social-item social-ok" href="#"></a>
-                                <a class="social-item social-vk" href="#"></a>
-                                <a class="social-item social-fb" href="#"></a>
-                                <a class="social-item social-tc" href="#"></a>
-                                <a class="social-item social-inst" href="#"></a>
-                                <a class="social-item social-tg" href="#"></a>
-                            </div>
-                        </div>
+
                     </div>
                     <hr>
                     <div class="info">

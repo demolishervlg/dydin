@@ -1,8 +1,8 @@
 footer{
-  background-image: radial-gradient(1031em 50em, #D2E4FF, #D9E9FE, #F4F8FC);
+  background-image: radial-gradient(1031em 33em, #D2E4FF, #D9E9FE, #F4F8FC);
   .section{
     &-footer-contacts{
-      padding-top: 220px;
+      padding-top: 130px;
       margin-bottom: 69px;
       &-title{
         font-weight: 500;
@@ -176,7 +176,7 @@ footer{
 
           &-submit{
             .btn{
-              padding: 13px 49px;
+              padding: 10px 20px;
             }
 
           }
@@ -194,6 +194,20 @@ footer{
         font-size: 16px;
         line-height: 140%;
         color: #000000;
+        &-block{
+          span{
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+          }
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 18px;
+        }
         p{
           max-width: 850px;
           span{
@@ -223,6 +237,7 @@ footer{
         font-size: 16px;
         line-height: 140%;
         color: $gray_text-2;
+        gap: 58px;
 
         p {
           max-width: 850px;
@@ -278,10 +293,23 @@ footer{
 
       &-main-footer{
         .copyright{
+          &-block{
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 24px;
+          }
           justify-content: center;
           margin-bottom: 15px;
+          p{
+            max-width: unset;
+            width: 100%;
+          }
         }
         .info{
+          p{
+            max-width: unset;
+          }
           justify-content: center;
         }
       }
