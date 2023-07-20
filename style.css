@@ -2101,6 +2101,7 @@ h6, .h6 {
   cursor: pointer;
   transition: all .25s ease-out;
   display: flex;
+  justify-content: center;
   width: max-content; }
   .btn:hover, .btn:hover:hover {
     background: #FFA735;
