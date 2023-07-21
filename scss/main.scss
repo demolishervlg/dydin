@@ -161,6 +161,29 @@
           color: $gray_text-2;
         }
       }
+
+      &-reviews{
+        .btns{
+          margin-top: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          .btn{
+            border-color: $gray-text-2;
+            color: $gray-text-2;
+            width: 100%;
+            padding: 10px 0;
+            max-width: 252px;
+            &:hover,&:hover:hover {
+              color: $accent_orange;
+              background: transparent;
+              border-color: $accent_orange;
+            }
+          }
+        }
+      }
+
       &-slider-wrap-reviews {
         margin-top: 20px ;
         position: relative;
@@ -177,6 +200,7 @@
           z-index: 0;
           grid-template-columns: repeat(12, 1fr);
           grid-auto-flow: dense;
+          height: unset;
         }
 
         .swiper-slide{
