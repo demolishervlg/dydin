@@ -109,6 +109,23 @@ $(function(){
 
 })
 
+$(document).ready(function() {
+    $(".content-block-text").each(function() {
+        let th = $(this);
+        console.log(th.prop('scrollHeight'))
+        if (th.prop('scrollHeight') > th.height()) {
+            let more = th.next(".show-all-container").find(".show-all");
+            th.next(".show-all-container").show();
+            th.addClass("content-block-text-shadow");
+            more.click(function() {
+                more.toggleClass('active');
+                th.toggleClass("content-block-text-shadow content-block-text-open");
+
+            });
+        }
+    });
+})
+
 var slidemenubutton = $('.slide-menu-button');
 slidemenubutton.css('background', 'transparent');
 $(document).ready(function () {

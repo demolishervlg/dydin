@@ -164,6 +164,59 @@ html {
 	}
 }
 
+.agree-form{
+
+	input[type="checkbox"]{
+		display: none;
+	}
+
+	label {
+		color: #000;
+		cursor: default;
+		font-weight: normal;
+		line-height: 30px;
+		padding: 10px 0;
+		vertical-align: middle;
+		display: flex;
+		gap: 10px;
+		text-align: left;
+		align-items: flex-start;
+	}
+
+	/* формируем внешний вид чекбокса в псевдоэлементе before */
+	label:before {
+		content: " ";
+		display: inline-block;
+		font: 20px/21px Arial;
+		position: relative;
+		text-align: center;
+		text-indent: 0px;
+		min-width: 22px;
+		height: 22px;
+		background: #FFF;
+		border-image: initial;
+		vertical-align: middle;
+		border: 1px solid #B3C8DB;
+		border-radius: 5px;
+		margin-top: 6px;
+	}
+
+	/* вариации внешнего вида в зав-ти от статуса checkbox */
+	/* checked */
+	input:checked + label:before {
+		content: url("/img/check.svg");
+		background: #1772E1;
+		border: 1px solid #1772E1;
+	}
+
+	/* disabled */
+	input:disabled + label:before {
+		background: #aaa;
+		color: #aaa;
+	}
+
+}
+
 @media (max-width:1229.98px) {
 	.pp-order {
 		width:900px;

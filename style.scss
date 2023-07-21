@@ -12,7 +12,7 @@ $grid-breakpoints: (
 $grid-gutter-width:24px !default;
 $transition-base:all .25s ease-out !default;
 $font-family-base:'Montserrat', sans-serif;
-$brand_blue:#1772E1;
+$brand_blue: #1772E1;
 $black_text:#424242;
 $black_text:#424242;
 $link: #2E9DF2;
@@ -729,6 +729,7 @@ h6, .h6 {
     width: 100%;
     .btn{
       padding: 13px 49px;
+      margin: auto;
     }
     .form-control{
       padding: 10px;
@@ -750,3 +751,38 @@ h6, .h6 {
 }
 
 
+
+
+.content-block-text {
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  transition: margin 0.3s;
+}
+.content-block-text-open {
+  height: auto;
+  margin-bottom: 50px;
+}
+.show-all{
+  content: url("img/Arrow_Circle_Right.svg");
+
+  &.active{
+    transform: rotate(180deg)
+  }
+}
+.content-block-text-shadow:after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #FFF 75%)
+}
+.show-all-container {
+  position: absolute;
+  right: 29px;
+  bottom: 16px;
+  display: none;
+}
